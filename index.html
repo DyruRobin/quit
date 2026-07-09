@@ -1,20 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width", initial-scale=1.0>
-	<title>"enoD m'I"</title>
-	<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Unlock</title>
+
+<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
 </head>
 <body>
-	<div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
-		<a href="#">
-			<img class="rounded-base" src="images/IMG_20260709_053209.jpg" alt="" />
-		</a>
-		<a href="#">
-			<h5 class="mb-t mb-2 text-2x1 font-semibold tracking-light text-handling">Dyru a.k.a. Rewhimsy.</h5> 
-		</a>
-		<p class="mb-6 text-body">Failure, Stoopid, Introvert, a Dead Weight on Family</p>
-	</div>
+
+<input id="key" type="text" placeholder="Password">
+<button onclick="loadWebsite()">Enter</button>
+
+<p id="status"></p>
+
+<script>
+async function decryptFile(file, key) {
+    const res = await fetch(file);
+    const encrypted = await res.text();
+
+    const decrypted = CryptoJS.AES.decrypt(encrypted, key)
+        .toString(CryptoJS.enc.Utf8);
+
+    if (!decrypted) {
+        throw new Error("Wrong key.");
+    }
+
+    return decrypted;
+}
+
+async function loadWebsite() {
+
+    try {
+
+        // Decode Base64 into the real AES key
+        const KEY = (document.getElementById("key").value.trim());
+
+        // Load CSS
+        const css = await decryptFile("style.enc", KEY);
+
+        const style = document.createElement("style");
+        style.textContent = css;
+        document.head.appendChild(style);
+
+        // Load HTML
+        const html = await decryptFile("index.enc", KEY);
+
+        document.body.innerHTML = html;
+
+    } catch (e) {
+
+        document.getElementById("status").textContent =
+            "Invalid key";
+
+    }
+}
+</script>
+
 </body>
 </html>
