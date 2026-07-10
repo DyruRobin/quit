@@ -1,60 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Unlock</title>
-
-<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width", initial-scale=1.0>
+	<title>"enoD m'I"</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
+<top>
+  <div class="button">
+    <a class="linknav" href="/index.html">
+      <h1 class="nav">Home</h1>
+    </a>
+    <a class="linknav" href="/assets/html/cll.html">
+      <h1 class="nav">Collections</h1>
+    </a>
+    <a class="linknav" href="#aboutme">
+      <h1 class="nav">About Me</h1>
+    </a>
+    <a class="linknav" href="/assets/misc/wgf.gif">
+      <img class="nav2" src="/assets/misc/wgf.gif" alt=""></img>
+    </a>
+    <a class="linknav" href="#town">
+      <h1 class="nav2text">My Town</h1>
+    </a>
+  </div>
+</top>
+
 <body>
-
-<input id="key" type="text" placeholder="Password">
-<button onclick="loadWebsite()">Enter</button>
-
-<p id="status"></p>
-
-<script>
-async function decryptFile(file, key) {
-    const res = await fetch(file);
-    const encrypted = await res.text();
-
-    const decrypted = CryptoJS.AES.decrypt(encrypted, key)
-        .toString(CryptoJS.enc.Utf8);
-
-    if (!decrypted) {
-        throw new Error("Wrong key.");
-    }
-
-    return decrypted;
-}
-
-async function loadWebsite() {
-
-    try {
-
-        // Decode Base64 into the real AES key
-        const KEY = (document.getElementById("key").value.trim());
-
-        // Load CSS
-        const css = await decryptFile("style.enc", KEY);
-
-        const style = document.createElement("style");
-        style.textContent = css;
-        document.head.appendChild(style);
-
-        // Load HTML
-        const html = await decryptFile("index.enc", KEY);
-
-        document.body.innerHTML = html;
-
-    } catch (e) {
-
-        document.getElementById("status").textContent =
-            "Invalid key";
-
-    }
-}
-</script>
-
+  <div class="card">
+  	<div class="header">
+  		<img src="/assets/files/images/c.jpg" alt="Profile">
+  		  <h2 class="title">The Unhinged Person</h2>
+  		</img>
+    </div>
+  	
+  	<div>
+  	  <a class="Citlali" href="#Dyru a.k.a. ReWhimsy.">
+  		  <h5>Dyru a.k.a. ReWhimsy</h5> 
+  		</a>
+  		<p><b>Am I Quitting from Discord?</b><br>&nbsp;&nbsp;No. I will never quitting from discord, if discord is banned or blocked, i'll move to another platform that exact same as discord.<br>&nbsp;&nbsp;I may not log in again to this account and became a new one, none will ever know.</p>
+  		<p>I may active on this site.</p>
+  		<p2>Note: After this is published I'll never want to talk about anything inside this page and github even the link on discord or in this page and site.</p2>
+  	</div>
+  </div>
+  <div class="below">
+    <a href="/assets/files/images/b.jpg">
+      <img src=/assets/files/images/b.jpg alt="">
+    </a>
+  </div>
+  <div class="centertext">
+    <p>DyruPoi</p>
+  </div>
 </body>
 </html>

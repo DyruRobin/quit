@@ -1,0 +1,107 @@
+top {
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  font-size: 8px;
+  margin-bottom: 15px;
+  background-color: pink;
+}
+
+.nav {
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav2 {
+  width: 40px;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.nav2text {
+  color:green;
+  position: absolute;
+  right: 50px;
+}
+
+.linknav {
+  text-decoration: none;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: #999aaa;
+	margin: 0;
+}
+
+.card {
+  overflow: hidden;
+	max-width: 100%;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	padding: 20px 20px;
+	border-radius: 16px;
+	box-shadow: 4px 4px 4px #000000;
+	background-image: linear-gradient(120deg, pink, #dddddd 50%, #ffaaff);
+}
+
+.header {
+  background-image: linear-gradient(90deg, white 10%, #a8bf);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+	margin: 20px 10px;
+	padding: 10px 10px;
+	border-radius: 10px;
+	border-inline-start: 10px solid #a8bf;
+	box-shadow: 0px 0px 12px #000000;
+}
+
+.header img {
+  width: 40%;
+  height: 40%;
+  border-radius: 8px;
+}
+
+.header h2 {
+  margin: 16px 0 8px;
+}
+
+.card h5 {
+  margin: 16px 0 8px;
+  font-size: 24px;
+}
+
+.card p {
+  color: #a66;
+}
+
+.Citlali {
+  color: black;
+  text-decoration: none;
+}
+
+.below img {
+  width: 100%;
+}
+
+.centertext {
+  bottom: 2%;
+  right: 46%;
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  border-radius: 100px 2%;
+  background-color: rgb(0 0 0 / 50%);
+  border-color: blue;
+  outline: solid 2px;
+  outline-color: green;
+}

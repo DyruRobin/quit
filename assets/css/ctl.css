@@ -1,0 +1,56 @@
+top {
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  font-size: 8px;
+  margin-bottom: 15px;
+  background-color: pink;
+}
+
+.nav {
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav2 {
+  width: 40px;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.nav2text {
+  color:green;
+  position: absolute;
+  right: 50px;
+}
+
+.linknav {
+  text-decoration: none;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: #999aaa;
+	margin: 0;
+}
+
+.pictures {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+.part {
+  display: flex;
+  width: 180px;
+  gap: 10px;
+  justify-content: center;
+  text-decoration: none;
+}
