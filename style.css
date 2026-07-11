@@ -38,6 +38,21 @@ body {
 	margin: 0;
 }
 
+.greetings {
+  font-size: 1px;
+  margin-top: -15px;
+}
+
+.greetings a {
+  text-decoration: none;
+  color: black;
+}
+
+.line {
+  outline: solid 1px;
+  outline-color: gray;
+}
+
 .card {
   overflow: hidden;
 	max-width: 100%;
@@ -82,7 +97,11 @@ body {
   color: #a66;
 }
 
-.Citlali {
+.card p a {
+  color: #a66;
+}
+
+.Dyru {
   color: black;
   text-decoration: none;
 }
@@ -104,4 +123,15 @@ body {
   border-color: blue;
   outline: solid 2px;
   outline-color: green;
+}
+
+.bye {
+  font-size: 1px;
+}
+
+.bye a {
+  color: black;
+  text-decoration: none;
+  right: 0%;
+  position: absolute;
 }

@@ -38,19 +38,70 @@ body {
 	margin: 0;
 }
 
-.pictures {
+.items {
+  position: absolute;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: wrap;
   justify-content: center;
-  margin: 20px;
-  align-items: center;
-  gap: 10px;
+  align-content: stretch;
+  padding: 6px;
+  gap: 12px;
 }
 
-.part {
+.pictures {
   display: flex;
-  width: 180px;
-  gap: 10px;
+  flex-flow: wrap;
   justify-content: center;
+  width: 140px;
+  height: 140px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.pictures img {
+  max-width: 100%;
+  max-height: 100⅝;
+}
+
+.pictures a {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centertext {
+  bottom: 2%;
+  right: 46%;
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  border-radius: 100px 2%;
+  background-color: rgb(0 0 0 / 50%);
+  border-color: blue;
+  outline: solid 2px;
+  outline-color: green;
+}
+
+
+.thumb a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumb img, .thumb video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.webm-thumb {
+    border: 3px solid #0000ff;
+    box-sizing: border-box;
 }
